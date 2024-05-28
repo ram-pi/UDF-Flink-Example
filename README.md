@@ -45,7 +45,7 @@ Utilize the command below to display a list of all uploaded artifacts.
 
 ```
 confluent flink artifact list
-}
+
 ```
 
 # Using EDF on FlinkSQL
