@@ -8,7 +8,7 @@ This contains repo contains sample UDF command which checks for 90 percent match
 
 ```
 mvn clean package
-}
+
 ```
 
 Note : You can write your custom logic on public double eval() function based on your usecase by removing the existing code
@@ -25,6 +25,7 @@ your-artifact-name
 ```
 If the command gets executed successfully it will generate pluginid and versionid which should look something similar below.
 
+```
 +----------------+----------------+
 | Name           | artifact-name    |
 | Plugin ID      | ccp-xxxxxxxxxxx  |
@@ -32,7 +33,7 @@ If the command gets executed successfully it will generate pluginid and versioni
 | Content Format | JAR              |
 +----------------+----------------+
 
-
+```
 Use the below command to list all the uploaded artifacts
 ```
 confluent flink artifact list
