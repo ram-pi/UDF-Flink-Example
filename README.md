@@ -1,4 +1,4 @@
-# UDF-Flink-JWrinker
+# UDF-Java
 
 This repository includes a sample UDF function which checks the percentage of  match between two strings.
 
