@@ -22,7 +22,8 @@ NOTE : You can write your custom logic on <b>public double eval() </b>function b
 
 # Register the JAR File
 
-To register the JAR file on the CC organization, begin by logging into the Confluent CLI and then utilize the following command
+To register the JAR file generated after executing the `mvn clean package` command on the CC organization, start by logging into the Confluent CLI and then use the following command.
+
 ```
 confluent flink artifact create 
 your-artifact-name
