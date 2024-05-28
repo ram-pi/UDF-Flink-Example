@@ -1,6 +1,12 @@
 # UDF-Flink-JWrinker
 
 This repository includes a sample UDF function which checks the percentage of  match between two strings.
+
+## Set up Pre-requisites
+```
+export TUTORIAL_HOME=<Tutorial directory>/UDF-Flink-JWrinker
+```
+
 # Generate JAR 
 
 1. To generate the necessary JAR File for upload via the CLI, execute the command below.
