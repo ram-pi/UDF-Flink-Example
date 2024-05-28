@@ -1,9 +1,9 @@
 # UDF-Flink-JWrinker
-This contains repo contains sample UDF command which checks for 90 percent match
 
+This repository includes a sample UDF function which checks the percentage of  match between two strings.
 # Generate JAR 
 
-1. Execute the below command to generate the JAR File which we need to upload using CLI.
+1. To generate the necessary JAR File for upload via the CLI, execute the command below.
 
 
 ```
@@ -11,19 +11,19 @@ mvn clean package
 
 ```
 
-Note : You can write your custom logic on public double eval() function based on your usecase by removing the existing code
+NOTE : You can write your custom logic on public double eval() function based on your usecase by removing the existing code
 
 
 # Register the JAR File
 
- To register the jar file on CC organization first login into the confluent CLI and use the below command:
-
+To register the JAR file on the CC organization, begin by logging into the Confluent CLI and then utilize the following command
 ```
 confluent flink artifact create 
 your-artifact-name
 --artifact-file path-to-jar-file.JAR
 ```
-If the command gets executed successfully it will generate pluginid and versionid which should look something similar below.
+
+Upon successful execution of the command, it will produce a plugin ID and version ID, which should resemble the following format.
 
 ```
 +----------------+----------------+
@@ -34,17 +34,16 @@ If the command gets executed successfully it will generate pluginid and versioni
 +----------------+----------------+
 
 ```
-Use the below command to list all the uploaded artifacts
+Utilize the command below to display a list of all uploaded artifacts.
+
 ```
 confluent flink artifact list
 }
 ```
 
-
 # Using EDF on FlinkSQL
 
-After uploading the jar using CLI next go to the flinkSQL editor to register the UDF on your particular flink workspace by using the below command
-
+Once you've uploaded the JAR using the CLI, proceed to the Flink SQL editor to register the UDF within your specific Flink workspace with the following command.
 
 ```
 CREATE FUNCTION UDF_NAME 
@@ -52,10 +51,9 @@ AS 'io.confluent.flink.table.modules.remoteudf.TShirtSizingIsSmaller'
 USING JAR 'confluent-artifact://pluginid/versionid';
 ```
 
-NOTE : Replace the class with your actual class that contains your eval function
+NOTE: Replace the class with your actual class that contains the eval function.
 
-
-Now since the UDF is successfully registered you can use the below command to list all the UDF Functions:
+Now that the UDF is successfully registered, you can utilize the command below to display a list of all UDF functions:
 
 ```
 SHOW USER FUNCTIONS;
@@ -66,6 +64,8 @@ Here is the Sample command which uses UDF function that we have just created
 ```
 select regionid, FUNCTION UDF_NAME(gender,"MAALE") from sample data
 ```
+
+This is what the output of the  query will appear .
 
 ![image](https://github.com/Gokuldev-PS/UDF-Flink-JWrinker/assets/132561683/dc072c92-4e80-4c8f-bb43-10f4dcc85553)
 
