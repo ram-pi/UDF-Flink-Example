@@ -17,7 +17,7 @@ mvn clean package
 
 ```
 
-NOTE : You can write your custom logic on public double eval() function based on your usecase by removing the existing code
+NOTE : You can write your custom logic on <b>public double eval() </b>function based on your usecase by removing the existing code
 
 
 # Register the JAR File
