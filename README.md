@@ -72,7 +72,6 @@ Here is the Sample command which uses UDF function that we have just created
 select regionid, FUNCTION UDF_NAME(gender,"MAALE") from sample data
 ```
 
-This is what the output of the  query will appear .
 
 ![image](https://github.com/Gokuldev-PS/UDF-Flink-JWrinker/assets/132561683/dc072c92-4e80-4c8f-bb43-10f4dcc85553)
 
