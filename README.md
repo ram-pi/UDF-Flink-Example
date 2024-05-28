@@ -48,7 +48,7 @@ confluent flink artifact list
 
 ```
 
-# Using EDF on FlinkSQL
+# Using UDF on FlinkSQL
 
 Once you've uploaded the JAR using the CLI, proceed to the Flink SQL editor to register the UDF within your specific Flink workspace with the following command.
 
