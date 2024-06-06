@@ -21,7 +21,7 @@
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-table-api-java</artifactId>
             <version>1.18.1</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -52,6 +52,7 @@
                         <includes>
                             <!-- Include all FailureEnricher dependencies here -->
                             <include>*:*</include>
+                            <!--                            <include>com.github.javafaker:javafaker</include>-->
                         </includes>
                     </artifactSet>
                 </configuration>
