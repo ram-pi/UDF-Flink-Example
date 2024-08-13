@@ -48,13 +48,25 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <artifactSet>
+                  <artifactSet>
                         <includes>
-                            <!-- Include all FailureEnricher dependencies here -->
+                           <!-- Include all UDF dependencies and their transitive dependencies here. -->
+                           <!-- This example shows how to capture all of them greedily. -->
                             <include>*:*</include>
-                            <!--                            <include>com.github.javafaker:javafaker</include>-->
                         </includes>
                     </artifactSet>
+                    <filters>
+                        <filter>
+                        <artifact>*</artifact>
+                        <excludes>
+                        <!-- Do not copy the signatures in the META-INF folder.
+                        Otherwise, this might cause SecurityExceptions when using the JAR. -->
+                        <exclude>META-INF/*.SF</exclude>
+                        <exclude>META-INF/*.DSA</exclude>
+                        <exclude>META-INF/*.RSA</exclude>
+                        </excludes>
+                        </filter>
+                    </filters>
                 </configuration>
             </plugin>
         </plugins>
